@@ -484,7 +484,7 @@ level_event[pduOutletPorts,PDU_LEVEL_POWER_IN_WATTS]
 // Current (A) for each PDU device
 level_event[pduOutletPorts,PDU_LEVEL_CURRENT]
 {
-    //fPDUCurrentValues[GET_LAST(dvPDUDevices)] = level.value
+	//fPDUCurrentValues[GET_LAST(dvPDUDevices)] = level.value
 	#if_defined INCLUDE_PDU_NOTIFY_OUTLET_CURRENT_CALLBACK
 		pduNotifyOutletCurrent (level.input.device, (level.value / 10.0))
 	#end_if
@@ -493,7 +493,7 @@ level_event[pduOutletPorts,PDU_LEVEL_CURRENT]
 // Power Factor for each PDU device
 level_event[pduOutletPorts,PDU_LEVEL_POWER_FACTOR]
 {
-    //fPDUPowerFactorValues[GET_LAST(dvPDUDevices)] = level.value
+	//fPDUPowerFactorValues[GET_LAST(dvPDUDevices)] = level.value
 	#if_defined INCLUDE_PDU_NOTIFY_OUTLET_POWER_FACTOR_CALLBACK
 		pduNotifyOutletPowerFactor (level.input.device, (level.value / 100.0))
 	#end_if
@@ -502,7 +502,7 @@ level_event[pduOutletPorts,PDU_LEVEL_POWER_FACTOR]
 // Energy for each PDU device
 level_event[pduOutletPorts,PDU_LEVEL_ENERGY]
 {
-    //fPDUEnergyValues[GET_LAST(dvPDUDevices)] = level.value
+	//fPDUEnergyValues[GET_LAST(dvPDUDevices)] = level.value
 	#if_defined INCLUDE_PDU_NOTIFY_OUTLET_ENERGY_CALLBACK
 		pduNotifyOutletEnergy (level.input.device, (level.value / 10.0))
 	#end_if
@@ -511,7 +511,7 @@ level_event[pduOutletPorts,PDU_LEVEL_ENERGY]
 // Axlink Voltage (V)
 level_event[dvPduMains2,PDU_LEVEL_AXLINK_VOLTAGE]
 {
-    //fPDUAxLinkVoltage = level.value
+	//fPDUAxLinkVoltage = level.value
 	#if_defined INCLUDE_PDU_NOTIFY_AXLINK_VOLTAGE_CALLBACK
 		pduNotifyAxlinkVoltage (level.input.device, (level.value / 10.0))
 	#end_if
@@ -520,7 +520,7 @@ level_event[dvPduMains2,PDU_LEVEL_AXLINK_VOLTAGE]
 // Axlink 1 Power (W)
 level_event[dvPduAxlinkBuses,PDU_LEVEL_AXLINK_POWER]
 {
-    //fPDUAxLinkPowerValues[1] = level.value
+	//fPDUAxLinkPowerValues[1] = level.value
 	#if_defined INCLUDE_PDU_NOTIFY_AXLINK_POWER
 		pduNotifyAxlinkPower (level.input.device, (level.value / 10.0))
 	#end_if
@@ -529,7 +529,7 @@ level_event[dvPduAxlinkBuses,PDU_LEVEL_AXLINK_POWER]
 // Axlink 1 Current (A)
 level_event[dvPduAxlinkBuses,PDU_LEVEL_AXLINK_CURRENT]
 {
-    //fPDUAxLinkCurrentValues[1] = level.value
+	//fPDUAxLinkCurrentValues[1] = level.value
 	#if_defined INCLUDE_PDU_NOTIFY_AXLINK_CURRENT
 		pduNotifyAxlinkCurrent (level.input.device, (level.value / 10.0))
 	#end_if

@@ -49,27 +49,27 @@ char VERSION_AMX_PDU_CONTROL[] = 'v1.0.0'
 
 
 /*
- * Function:	pduSetTempScaleCelcius
+ * Function:    pduSetTempScaleCelcius
  * 
- * Arguments:	dev pduPort1 - port 1 on the PDU
+ * Arguments:   dev pduPort1 - port 1 on the PDU
  * 
- * Description:	Sets temperature scale on the PDU to Celcius Degrees.
+ * Description: Sets temperature scale on the PDU to Celcius Degrees.
  */
 define_function pduSetTempScaleCelcius (dev pduPort1)
 {
-    channelOff (pduPort1,PDU_CHANNEL_TEMP_SCALE)
+	channelOff (pduPort1,PDU_CHANNEL_TEMP_SCALE)
 }
 
 /*
- * Function:	pduSetTempScaleFarenheit
+ * Function:    pduSetTempScaleFarenheit
  * 
- * Arguments:	dev pduPort1 - port 1 on the PDU
+ * Arguments:   dev pduPort1 - port 1 on the PDU
  * 
- * Description:	Sets temperature scale on the PDU to Farenheit Degrees.
+ * Description: Sets temperature scale on the PDU to Farenheit Degrees.
  */
 define_function pduSetTempScaleFahrenheit (dev pduPort1)
 {
-    channelOn (pduPort1,PDU_CHANNEL_TEMP_SCALE)
+	channelOn (pduPort1,PDU_CHANNEL_TEMP_SCALE)
 }
 
 
@@ -81,11 +81,11 @@ define_function pduSetTempScaleFahrenheit (dev pduPort1)
 
 
 /*
- * Function:	pduEnableRelayPower
+ * Function:    pduEnableRelayPower
  * 
- * Arguments:	dev pduOutletPort - outlet port on the PDU
+ * Arguments:   dev pduOutletPort - outlet port on the PDU
  * 
- * Description:	Enable PDU Power Outlet Relay.
+ * Description: Enable PDU Power Outlet Relay.
  */
 define_function pduEnableRelayPower (dev pduOutletPort)
 {
@@ -93,11 +93,11 @@ define_function pduEnableRelayPower (dev pduOutletPort)
 }
 
 /*
- * Function:	pduDisableRelayPower
+ * Function:    pduDisableRelayPower
  * 
- * Arguments:	dev pduOutletPort - outlet port on the PDU
+ * Arguments:   dev pduOutletPort - outlet port on the PDU
  * 
- * Description:	Disable PDU Power Outlet Relay.
+ * Description: Disable PDU Power Outlet Relay.
  */
 define_function pduDisableRelayPower (dev pduOutletPort)
 {
@@ -105,11 +105,11 @@ define_function pduDisableRelayPower (dev pduOutletPort)
 }
 
 /*
- * Function:	pduToggleRelayPower
+ * Function:    pduToggleRelayPower
  * 
- * Arguments:	dev pduOutletPort - outlet port on the PDU
+ * Arguments:   dev pduOutletPort - outlet port on the PDU
  * 
- * Description:	Toggle PDU Power Outlet Relay.
+ * Description: Toggle PDU Power Outlet Relay.
  */
 define_function pduToggleRelayPower (dev pduOutletPort)
 {
@@ -117,11 +117,11 @@ define_function pduToggleRelayPower (dev pduOutletPort)
 }
 
 /*
- * Function:	pduRequestPersistStateAllOutlets
+ * Function:    pduRequestPersistStateAllOutlets
  * 
- * Arguments:	dev pduPort1 - port 1 device on the PDU
+ * Arguments:   dev pduPort1 - port 1 device on the PDU
  * 
- * Description:	Request Persist State of all outlets on PDU.
+ * Description: Request Persist State of all outlets on PDU.
  */
 define_function pduRequestPersistStateAllOutlets (dev pduPort1)
 {
@@ -137,13 +137,13 @@ define_function pduRequestPersistStateAllOutlets (dev pduPort1)
 
 
 /*
- * Function:	pduSetPowerTriggerSenseValue
+ * Function:    pduSetPowerTriggerSenseValue
  * 
- * Arguments:	dev pduPort1 - port 1 device on the PDU
- *				integer outlet - outlet port on the PDU
- *				integer triggerValue - trigger sense value
+ * Arguments:   dev pduPort1 - port 1 device on the PDU
+ *              integer outlet - outlet port on the PDU
+ *              integer triggerValue - trigger sense value
  * 
- * Description:	Set Trigger Sense Value for PDU Power Outlet.
+ * Description: Set Trigger Sense Value for PDU Power Outlet.
  */
 define_function pduSetPowerTriggerSenseValue (dev pduPort1, integer outlet, integer triggerValue)
 {
@@ -151,12 +151,12 @@ define_function pduSetPowerTriggerSenseValue (dev pduPort1, integer outlet, inte
 }
 
 /*
- * Function:	pduRequestPowerTriggerSenseValue
+ * Function:    pduRequestPowerTriggerSenseValue
  * 
- * Arguments:	dev pduPort1 - port 1 device on the PDU
- *				integer outlet - outlet port on the PDU
+ * Arguments:   dev pduPort1 - port 1 device on the PDU
+ *              integer outlet - outlet port on the PDU
  * 
- * Description:	Request Trigger Sense Value of PDU Power Outlet.
+ * Description: Request Trigger Sense Value of PDU Power Outlet.
  */
 define_function pduRequestPowerTriggerSenseValue (dev pduPort1, integer outlet)
 {
@@ -172,11 +172,11 @@ define_function pduRequestPowerTriggerSenseValue (dev pduPort1, integer outlet)
 
 
 /*
- * Function:	pduRequestPhaseAngle
+ * Function:    pduRequestPhaseAngle
  * 
- * Arguments:	dev pduPort1 - port 1 device on the PDU
+ * Arguments:   dev pduPort1 - port 1 device on the PDU
  * 
- * Description:	Request Phase Angle on PDU.
+ * Description: Request Phase Angle on PDU.
  */
 define_function pduRequestPhaseAngle (dev pduPort1)
 {
@@ -192,11 +192,11 @@ define_function pduRequestPhaseAngle (dev pduPort1)
 
 
 /*
- * Function:	pduResetAccumulatedEnergyReading
+ * Function:    pduResetAccumulatedEnergyReading
  * 
- * Arguments:	dev dvPduOutlet - Outlet device on the PDU
+ * Arguments:   dev dvPduOutlet - Outlet device on the PDU
  * 
- * Description:	Reset the accumulated energy reading for a PDU outlet.
+ * Description: Reset the accumulated energy reading for a PDU outlet.
  */
 define_function pduResetAccumulatedEnergyReading (dev dvPduOutlet)
 {
@@ -204,11 +204,11 @@ define_function pduResetAccumulatedEnergyReading (dev dvPduOutlet)
 }
 
 /*
- * Function:	pduFactoryReset
+ * Function:    pduFactoryReset
  * 
- * Arguments:	dev pduPort1 - port 1 device on the PDU
+ * Arguments:   dev pduPort1 - port 1 device on the PDU
  * 
- * Description:	Restores all settings on the PDU to the factory default settings.
+ * Description: Restores all settings on the PDU to the factory default settings.
  */
 define_function pduFactoryReset (dev pduPort1)
 {
@@ -216,11 +216,11 @@ define_function pduFactoryReset (dev pduPort1)
 }
 
 /*
- * Function:	pduReset
+ * Function:    pduReset
  * 
- * Arguments:	dev pduPort1 - port 1 device on the PDU
+ * Arguments:   dev pduPort1 - port 1 device on the PDU
  * 
- * Description:	Triggers a Power-On-Reset of the PDU. Toggles all interruptible power outlets.
+ * Description: Triggers a Power-On-Reset of the PDU. Toggles all interruptible power outlets.
  */
 define_function pduResetOutlet (dev pduPort1)
 {
@@ -236,11 +236,11 @@ define_function pduResetOutlet (dev pduPort1)
 
 
 /*
- * Function:	pduRequestVersion
+ * Function:    pduRequestVersion
  * 
- * Arguments:	dev pduPort1 - port 1 device on the PDU
+ * Arguments:   dev pduPort1 - port 1 device on the PDU
  * 
- * Description:	Request FW version of PDU.
+ * Description: Request FW version of PDU.
  */
 define_function pduRequestVersion (dev pduPort1)
 {
@@ -248,11 +248,11 @@ define_function pduRequestVersion (dev pduPort1)
 }
 
 /*
- * Function:	pduRequestSerialNumber
+ * Function:    pduRequestSerialNumber
  * 
- * Arguments:	dev pduPort1 - port 1 device on the PDU
+ * Arguments:   dev pduPort1 - port 1 device on the PDU
  * 
- * Description:	Request PDU Serial Number.
+ * Description: Request PDU Serial Number.
  */
 define_function pduRequestSerialNumber (dev pduPort1)
 {

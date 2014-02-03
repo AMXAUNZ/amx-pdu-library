@@ -230,7 +230,7 @@ define_function char[100] pduParseCmdParam(CHAR cCmd[])
 				}
 				break;
 			}
-
+			
 			// Collect string.
 			case 2: //ST_COLLECT
 			{
@@ -290,18 +290,18 @@ define_function char[100] pduParseCmdParam(CHAR cCmd[])
 				break;
 			}
 		}
-
+		
 		// OK, if end of string or done, process and exit
 		IF (bDone == TRUE || nLoop >= length_array(cCmd))
 		{
 			// remove cTemp from cCmd
 			cCmd = mid_string(cCmd, nLoop + 1, length_string(cCmd) - nLoop)
-
+			
 			// cTemp is done
 			return cTemp;
 		}
 	}
-
+	
 	// Well...we should never hit this
 	return "";
 }
