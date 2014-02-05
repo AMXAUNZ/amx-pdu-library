@@ -188,7 +188,7 @@ The callback function will be automatically triggered whenever a change occurs o
 E.g:
 
 		#program_name='main program'
-			
+		
 		define_device
 		
 		dvPduMain = 85:1:0
@@ -197,9 +197,9 @@ E.g:
 		dvPduOutletDisplayMonitor = 85:1:0
 		dvPduOutletAmplifier = 86:1:0
 		dvPduOutletDocCam = 87:1:0
-			
+		
 		define_variable
-			
+		
 		// DEV arrays for amx-pdu-listener to use
 		dvPduMains1[] = { dvPduMain }
 		dev pduOutletPorts[] = { dvPduOutletDisplayMonitor, dvPduOutletAmplifier, dvPduOutletDocCam }
